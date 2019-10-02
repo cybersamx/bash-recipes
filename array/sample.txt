@@ -1,0 +1,4 @@
+bird
+cat
+dog
+hamster
