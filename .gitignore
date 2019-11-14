@@ -29,4 +29,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### JetBrains ###
+.idea
+
 # End of https://www.gitignore.io/api/macos

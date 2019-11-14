@@ -1,6 +1,7 @@
 # Collection of Bash Recipes
 
-A collection of simple Bash recipes/examples.
+A collection of simple Bash recipes.
 
-* [Variable declaration](declare)
 * [Array](array)
+* [String](string)
+* [Variable declaration](declare)

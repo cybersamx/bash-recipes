@@ -1,6 +1,6 @@
 # Array
 
-Recipes/examples of how you would use array in bash.
+Recipes of how you would use array in bash.
 
 * [Array basics](basics.sh)
 * [Array iteration](iterate.sh)
