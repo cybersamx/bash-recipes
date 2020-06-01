@@ -1,11 +1,14 @@
 # Collection of Bash Recipes
 
-A collection of simple Bash recipes.
+A collection of Bash scripts/recipes.
 
-* [Array](array)
-* [Datetime](datetime)
-* [Prompting user](prompt)
-* [String](string)
-* [Variable declaration](declare)
+## Recipes
 
-Right now, these bash recipes are specific to MacOS. Linux coming later.
+* [Basics](basics) - Bash basics.
+  * [Array](basics/array) - Using arrays in bash. 
+  * [Datetime](basics/datetime) - Using date time in bash.
+  * [Prompting user](basics/prompt) - Recipes for prompting the user for inputs. 
+  * [String](basics/string) - Recipes for manipulating strings in bash.
+  * [Variable declaration](basics/declare) - Variable declaration in bash.
+
+Right now, these bash recipes are specific to MacOS.
