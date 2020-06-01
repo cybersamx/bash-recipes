@@ -2,7 +2,7 @@
 
 # delcare is a bash constuct that set a variable attributes and values.
 
-# declare options
+# variables options
 # + turns off a given attribute
 # - turns on a given attribute
 # -g Create global varaibles when used in a shell
@@ -16,7 +16,7 @@
 # -u Convert variables to upper case on assignment
 # -x to make variables export
 #
-# declare makes variables local, as with the local command.
+# variables makes variables local, as with the local command.
 
 # --- Declare vs Normal Assign ---
 
@@ -27,7 +27,7 @@ function declare_vs_assign() {
     echo "${b}"
 
     # Assigns value to the variable.
-    # Variable is implicitly declaraed as default string type.
+    # Variable is implicitly declared as default string type.
     c=5
     d="${c}"+3
     echo "${d}"
@@ -36,7 +36,7 @@ function declare_vs_assign() {
 # --- Local Variable ---
 
 function declare_local() {
-    # local and declare are the same
+    # local and variables are the same
     local a='local a'
     declare b='local b'
     echo "${a}"
@@ -76,7 +76,7 @@ function declare_indexed_array() {
 
 function declare_readonly() {
     declare -r const="immutable"
-    
+
     # Expect an error
     const="mutable"
 }

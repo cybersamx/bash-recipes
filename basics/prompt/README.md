@@ -1,6 +1,6 @@
 # Prompt
 
-Recipes of how implementing prompts.
+Recipes of implementing different user prompts in bash.
 
 * [Continue prompt](continue.sh)
 * [Yes or no prompt](yes-no.sh)

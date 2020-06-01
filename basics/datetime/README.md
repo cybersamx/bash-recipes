@@ -1,5 +1,5 @@
 # Datetime
 
-Recipes of using datetime in bash.
+Datetime in bash.
 
 * [Basics](basics.sh)
