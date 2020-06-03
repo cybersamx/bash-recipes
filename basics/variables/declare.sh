@@ -1,23 +1,5 @@
 #!/usr/bin/env bash
 
-# delcare is a bash constuct that set a variable attributes and values.
-
-# variables options
-# + turns off a given attribute
-# - turns on a given attribute
-# -g Create global varaibles when used in a shell
-# -a Make variables indexed array (if supported)
-# -A Make variables associative array (if supported)
-# -i Make variables have integer attribute, similar to let and allows arithmetic
-# -l Convert variables to lower case on assignment
-# -n Make variable a reference to the variable named by its value
-# -r Make variables readonly
-# -t Make variables have the 'trace' attribute
-# -u Convert variables to upper case on assignment
-# -x to make variables export
-#
-# variables makes variables local, as with the local command.
-
 # --- Declare vs Normal Assign ---
 
 function declare_vs_assign() {
