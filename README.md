@@ -4,8 +4,9 @@ A collection of Bash scripts/recipes.
 
 ## Recipes
 
-* [Basics](basics) - Bash basics.
-  * [Array](basics/array) - arrays in bash. 
+* [Basics](basics) - bash basics.
+  * [Array](basics/array) - arrays in bash.
+  * [Arithmetic](basics/arithmetic) - arithmetic operations (integer and float) in bash.
   * [Datetime](basics/datetime) - date time in bash.
   * [Function](basics/function) - functions in bash.
   * [Loop](basics/loop) - different ways to loop in bash.
