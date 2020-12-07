@@ -41,6 +41,8 @@ function args_as_array() {
     for arg in ${args[@]}; do
         printf "${arg} "
     done
+
+    echo
 }
 
 args_as_array cat dog horse bird
