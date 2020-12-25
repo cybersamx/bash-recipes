@@ -8,15 +8,40 @@
 # User's response as string
 #------------------------------------------------------------------------------
 
-function prompt_for_question() {
-  declare question="${1}"
-  declare default_answer="${2}"
+function prompt_question() {
+  local question="${1}"
+  local default_answer="${2}"
 
   read -r -p "${question} (${default_answer}) " answer
-  [[ "${answer}" == '' ]] && answer="${default_answer}"
+  [ -z "${answer}" ] && answer="${default_answer}"
   echo "${answer}"
 }
 
-path=$(prompt_for_question 'Enter path to save file?' '/home/me')
+function multiple_choice() {
+  local question="${1}"
+  local csv="${2}"
+  local default_answer="${3}" # Needs to be an integer
+
+  local buf="${question}"
+  buf+=$'\n'
+  IFS=',' read -r -a choices <<< "${csv}"
+
+  for (( i=0; i<"${#choices[@]}"; i++ )); do
+    buf+="${i} - ${choices[i]}"
+    buf+=$'\n'
+  done
+
+  read -rp "${buf}Your choice (${default_answer} - ${choices[${default_answer}]}) " answer
+  if [ -z "${answer}" ]; then
+    answer="${choices[${default_answer}]}"
+  else
+    answer="${choices[${answer}]}"
+  fi
+  echo "${answer}"
+}
+
+path=$(prompt_question 'Enter path to save file?' '/home/me')
 echo "User entered ${path}."
 
+direction=$(multiple_choice 'Where do you want to go?' 'North,South,East,West' 0)
+echo "User want to go ${direction}."

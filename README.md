@@ -7,6 +7,7 @@ A collection of Bash scripts/recipes. My handy guide for Bash.
 * [Basics](basics) - Bash basics.
   * [Array](basics/array) - Arrays in bash.
   * [Arithmetic](basics/arithmetic) - Arithmetic operations (integer and float) in bash.
+  * [Conditional](basics/conditional) - Basic conditional expressions in bash.
   * [Datetime](basics/datetime) - Date time in bash.
   * [Function](basics/function) - Functions in bash.
   * [Loop](basics/loop) - Different ways to loop in bash.
