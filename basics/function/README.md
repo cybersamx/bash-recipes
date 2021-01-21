@@ -31,7 +31,7 @@ Functions in bash takes in parameters as an array and perform some task with the
    ```bash
    declare msg
    function foo() {
-       msg = 'hello'
+       msg='hello'
    }
 
    foo
