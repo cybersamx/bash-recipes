@@ -3,64 +3,65 @@
 # --- Declare vs Normal Assign ---
 
 function declare_vs_assign() {
-    # Declaration and assignment.
-    declare -i a=5
-    declare -i b="${a}"+3
-    echo "${b}"
+  # Declaration and assignment.
+  declare -i a=5
+  declare -i b="${a}"+3
+  echo "${b}"
 
-    # Assigns value to the variable.
-    # Variable is implicitly declared as default string type.
-    c=5
-    d="${c}"+3
-    echo "${d}"
+  # Assigns value to the variable.
+  # Variable is implicitly declared as default string type.
+  c=5
+  d="${c}"+3
+  echo "${d}"
 }
 
 # --- Local Variable ---
 
 function declare_local() {
-    # local and variables are the same
-    local a='local a'
-    declare b='local b'
-    echo "${a}"
-    echo "${b}"
+  # local and variables are the same
+  local a='local a'
+  declare b='local b'
+  echo "${a}"
+  echo "${b}"
 }
 
 # --- Export Variable ---
 
 function declare_export() {
-    declare -x MY_EXPORT='export'
-    env | grep MY_EXPORT
+  declare -x MY_EXPORT='export'
+  env | grep MY_EXPORT
 
-    # Remove the export variable
-    unset MY_EXPORT
-    env | grep MY_EXPORT
+  # Remove the export variable
+  unset MY_EXPORT
+  env | grep MY_EXPORT
 }
 
 # --- Integer ---
 
 function declare_integer() {
-    declare -i a=3*5
-    echo "${a}"
+  # Declare am integer
+  declare -i a=$(( 3*5 ))
+  echo "${a}"
 
-    # Let is the construct that enable arithmetic evaluation in bash.
-    let b=3*5
-    echo "${b}"
+  # Use (( expr )) to enable arithmetic evaluation in bash.
+  (( b=3*5 ))
+  echo "${b}"
 }
 
 # --- Indexed Array ---
 
 function declare_indexed_array() {
-    declare -a array=('a' 'b' 'c')
-    echo "${array[@]}"
+  declare -a array=('a' 'b' 'c')
+  echo "${array[@]}"
 }
 
 # --- Readonly Variable ---
 
 function declare_readonly() {
-    declare -r const="immutable"
+  declare -r const="immutable"
 
-    # Expect an error
-    const="mutable"
+  # Expect an error
+  const="mutable"
 }
 
 declare_vs_assign

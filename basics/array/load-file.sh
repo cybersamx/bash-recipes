@@ -18,6 +18,6 @@ function iterate() {
   done
 }
 
-declare pets=($(read_from_file_to_array 'sample.txt'))
+declare pets=("$(read_from_file_to_array 'sample.txt')")
 
 iterate "${pets[@]}"

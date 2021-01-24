@@ -8,6 +8,8 @@ There 3 ways to do integer arithmetic in bash:
 * Declare an integer variable or expression using `declare`.
 * Enclose an integer variable or expression using double parenthesis.
 
+According to [ShellCheck](https://github.com/koalaman/shellcheck/wiki/SC2219), prefer `(( expr ))` instead of `let expr`.
+
 ### Let
 
 Using `let`.

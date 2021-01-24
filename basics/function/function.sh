@@ -21,7 +21,7 @@ function pipe_to_stdout() {
 }
 
 output=$(pipe_to_stdout hello world)
-echo ${output}
+echo "${output}"
 
 declare msg
 function global_var() {
@@ -32,17 +32,17 @@ function global_var() {
 }
 
 global_var hello world
-echo ${msg}
+echo "${msg}"
 
 function args_as_array() {
-    # Arguments are represented as an array.
-    declare args=(${@})
+  # Arguments are represented as an array.
+  declare args=("${@}")
 
-    for arg in ${args[@]}; do
-        printf "${arg} "
-    done
+  for arg in "${args[@]}"; do
+      printf "%s " "${arg}"
+  done
 
-    echo
+  echo
 }
 
 args_as_array cat dog horse bird

@@ -15,10 +15,10 @@ if [ "${person1_last}" == "${person2_last}" ] || [ "${person1_first}" == "${pers
   echo 'First or last names match'
 fi
 
-if [ "${a}" -ge 50 ] && [ "${a}" -le 100 ]; then
+if [ ${a} -ge 50 ] && [ ${a} -le 100 ]; then
   echo 'Integer is between 50 and 100'
 fi
 
-if [ "${b}" -lt 50 ] || [ "${b}" -gt 100 ]; then
+if [ ${b} -lt 50 ] || [ ${b} -gt 100 ]; then
   echo 'Integer is outside of 50-100'
 fi

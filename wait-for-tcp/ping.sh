@@ -11,12 +11,12 @@ function ping_tcp() {
     declare -i passed=0
 
     # Loop thru to ping the port and if it fails, wait before retry it again unless we have exhausted all our retries.
-    printf "Connecting to port ${port}."
-    for i in $(seq 1 ${retries});
-    do nc -v -w 1 localhost ${port} > /dev/null 2>&1 && passed=0 && break || passed=${?} && printf '.' && sleep ${wait};
+    printf "Connecting to port %s" "${port}"
+    for _ in $(seq 1 ${retries}); do
+      nc -v -w 1 localhost ${port} > /dev/null 2>&1 && passed=0 && break || passed=${?} && printf '.' && sleep ${wait};
     done
     echo
-    if (( ${passed} == 0 )); then
+    if [ ${passed} -eq 0 ]; then
         echo "Port ${port} is open"
 
         # Final wait before running the program. Sometimes a server may have additional init after a tcp is open.
