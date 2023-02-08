@@ -14,6 +14,7 @@ A collection of Bash scripts/recipes. My handy guide for Bash.
   * [Prompting user](basics/prompt) - Ways to prompt the user for inputs.
   * [String](basics/string) - String manipulation in bash.
   * [Variables](basics/variables) - Variables in bash.
+* [Exit code conditional](exit-code-conditional) - Check the exit code of a command execution.
 * [In-place file edit](in-place-file-edit) - Edit the content of a file eg. change a line, remove a line, etc. Useful for dynamically changing the content of a file.
 * [Pretty print](pretty-print) - Print text with color.
 * [Set trap](trap) - Examines the use of the `trap` command and how it is used to handle a system signal like SIGTERM and SIGINT.
